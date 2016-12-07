@@ -1,0 +1,9 @@
+{
+  "name": "varnerinstant-deploy",
+  "version": "1.0.0",
+  "description": "git-based deployment service for varnerin.info",
+  "main": "index.js",
+  "repository": "git@github.com:BaconSoap/varnerinstant-deploy.git",
+  "author": "Andrew Varnerin <andrew@varnerin.info>",
+  "license": "MIT"
+}
