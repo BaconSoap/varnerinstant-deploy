@@ -5,5 +5,10 @@
   "main": "index.js",
   "repository": "git@github.com:BaconSoap/varnerinstant-deploy.git",
   "author": "Andrew Varnerin <andrew@varnerin.info>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^0.0.2",
+    "dotenv": "^2.0.0",
+    "githubhook": "^1.7.1"
+  }
 }

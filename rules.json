@@ -1,0 +1,9 @@
+[
+  {
+    "name": "example",
+    "repo": "varnerinstant-deploy",
+    "branch": "master",
+    "path": "./say-hi.sh",
+    "enabled": true
+  }
+]
