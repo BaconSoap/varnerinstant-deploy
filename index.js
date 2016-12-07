@@ -4,6 +4,8 @@ require('dotenv').config();
 let githubhook = require('githubhook');
 let gh = githubhook({secret: process.env.GITHUB_SECRET});
 let fs = require('fs');
+let shell = require('shelljs');
+
 
 let allRules = require('./rules.json');
 
@@ -15,9 +17,16 @@ gh.on('*', function(event, repo, ref, data) {
   console.log(ref);
   data.request = undefined;
   fs.appendFileSync('dataLog.log', JSON.stringify(data) + '\r\n');
+  checkRules(repo, ref, allRules);
 });
 
 function checkRules(repo, branch, rules) {
-  let matches = rules.filter(x => x.repo === repo && x.branch === branch);
+  branch = branch.replace('refs/heads/', '');
 
+  let matches = rules.filter(x => x.enabled && x.repo === repo && x.branch === branch);
+
+  matches.forEach(x => {
+    let proc = x.run;
+    shell.exec(proc);
+  });
 }

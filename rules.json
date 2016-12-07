@@ -3,7 +3,7 @@
     "name": "example",
     "repo": "varnerinstant-deploy",
     "branch": "master",
-    "path": "./say-hi.sh",
+    "run": "bash -c './say-hi.sh'",
     "enabled": true
   }
 ]
