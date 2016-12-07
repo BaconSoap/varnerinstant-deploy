@@ -10,6 +10,7 @@
     "@types/node": "^0.0.2",
     "dotenv": "^2.0.0",
     "githubhook": "^1.7.1",
+    "jsonfile": "^2.4.0",
     "shelljs": "^0.7.5"
   }
 }

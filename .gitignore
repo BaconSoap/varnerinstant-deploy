@@ -61,3 +61,5 @@ jspm_packages
 .env
 
 test.txt
+
+rules.json

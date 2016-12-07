@@ -5,9 +5,11 @@ let githubhook = require('githubhook');
 let gh = githubhook({secret: process.env.GITHUB_SECRET});
 let fs = require('fs');
 let shell = require('shelljs');
+let jsonfile = require('jsonfile');
 
+let rulesExists = fs.existsSync('./rules.json');
 
-let allRules = require('./rules.json');
+let allRules = rulesExists ? jsonfile.readFileSync('./rules.json') : jsonfile.readFileSync('./rules.example.json');
 
 gh.listen();
 
