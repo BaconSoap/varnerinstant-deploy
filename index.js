@@ -13,7 +13,7 @@ let allRules = rulesExists ? jsonfile.readFileSync('./rules.json') : jsonfile.re
 
 gh.listen();
 
-gh.on('push', function(event, repo, ref, data) {
+gh.on('push', function(repo, ref, data) {
   console.log(event);
   console.log(repo);
   console.log(ref);
